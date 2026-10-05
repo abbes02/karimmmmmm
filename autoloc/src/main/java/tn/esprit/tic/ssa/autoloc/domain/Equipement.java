@@ -24,7 +24,6 @@ public class Equipement {
     @Column(nullable = false, length = 100)
     private String libelle;
 
-    // Côté inverse de l'association plusieurs-à-plusieurs Vehicule <-> Equipement.
     @ManyToMany(mappedBy = "equipements")
     private Set<Vehicule> vehicules = new HashSet<>();
 }
